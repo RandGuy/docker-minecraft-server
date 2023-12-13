@@ -1,0 +1,69 @@
+version: "3.8"
+
+services:
+  mc:
+    image: itzg/minecraft-server
+    environment:
+      EULA: true
+      TYPE: FORGE
+      # allocate from https://console.curseforge.com/ and set in .env file
+      CF_API_KEY: ${CF_API_KEY}
+      VERSION: 1.18.2
+      CURSEFORGE_FILES: |
+        createaddition
+        yungs-better-strongholds
+        tinkers-construct
+        ars-elemental
+        when-dungeons-arise
+        smooth-chunk-save
+        yungs-better-end-island
+        oculus
+        immersive-engineering
+        creativecore
+        spark
+        lazy-dfu-forge
+        curios
+        supplementaries
+        not-enough-animations
+        yungs-api
+        yungs-better-desert-temples
+        create
+        artifacts
+        ars-instrumentum
+        jei
+        farmers-delight
+        modernfix
+        natures-compass
+        yungs-better-mineshafts-forge
+        yungs-better-dungeons
+        create-stuff-additions
+        terrablender
+        expandability
+        yungs-better-nether-fortresses
+        starlight-forge
+        ars-creo
+        mouse-tweaks
+        ars-nouveau
+        comforts
+        selene
+        patchouli
+        biomes-o-plenty
+        farsight
+        ars-omega
+        geckolib
+        embeddium
+        attributefix
+        yungs-better-witch-huts
+        yungs-better-ocean-monuments
+        entityculling
+        inventory-sorter
+        mantle
+        ambientsounds
+        storage-drawers
+        ferritecore
+        corpse
+        complementary-reimagined
+        clouds-unobtrusive-shields
+        fresh-animations
+    ports:
+      - "25565:25565"
